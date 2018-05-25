@@ -1,0 +1,77 @@
+/* Rules for Legend */
+
+#customLegendBtn {
+   display: none;
+   position: absolute;
+   right: 20px;
+   width: 75px;
+   height: 35px;
+   z-index: 900;
+   background: #fff;
+   cursor: pointer;
+}
+
+#customLegendBtn h3 {
+   margin: 0;
+   padding: 5px 0;   
+   text-align: center;
+   font-size: 14px;
+   font-weight: bold;
+   font-family: Verdana, Geneva, sans-serif;   
+}
+
+#customLegend {
+   display: none;
+   position: absolute;
+   right: 20px;
+   width: 200px;
+   height: 175px;
+   background: #fff;
+   z-index: 800;
+   margin: 0;
+   padding: 15px;
+   cursor: auto;
+}
+
+#customLegend ul {
+   list-style-type: none;
+   margin-bottom: 10px;
+   padding: 0;
+}
+
+#customLegend ul:first-child {
+   margin-top: 25px;
+}
+
+#customLegend ul li {
+   margin-bottom: 5px;
+   padding: 0;
+   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+   font-weight: bold;
+   font-size: 12px;
+}
+
+
+/* Media Query */
+@media (max-width: 767px) {
+      #customLegendBtn {
+         right: 0px;
+      }
+      
+      #customLegend {
+         width: 100%;
+         height: 100%;
+         right: 0;
+         margin: 0;
+         padding: 0;
+         overflow-y: scroll;
+      }
+      
+      #customLegend ul {
+         padding: 0 15px;
+      }
+      
+      #customLegend ul:first-child {
+         margin-top: 10px;
+      }
+}
