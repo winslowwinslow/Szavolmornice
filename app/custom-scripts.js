@@ -5,9 +5,24 @@ define(["dojo/topic"], function(topic) {
 
 	// The application is ready
 	topic.subscribe("tpl-ready", function(){
-		/*
-		* Custom Javascript to be executed when the application is ready goes here
-		*/
+		// Viewport Width
+var viewportWidth = $(window).width();
+// Custom Legend
+var customLegendBtn = $('#customLegendBtn');
+
+// Custom Legend - If screen width is above breakpoint, display legend button
+if (viewportWidth > 768) {
+   customLegendBtn.show();
+} else {
+   $('#mobileThemeList .mobileTitleThemes').click(function() {
+      customLegendBtn.show(); // show legend button once map is visible below breakpoint
+   });
+}        
+        
+// Custom Legend - add display/hide functionality to Legend button
+customLegendBtn.click(function () {
+   $('#customLegend').toggle(); // hide/show legend when legend button clicked
+}); 
 	});
 
 	// Tab navigation.  This is fired anytime the tab is selected/changed.
